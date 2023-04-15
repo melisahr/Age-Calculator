@@ -1,0 +1,133 @@
+/*Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+:root{
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Light-grey);
+}
+.container{
+    background-color: var(--White);
+    width: 40vw;
+    border-radius: 1rem;
+    border-bottom-right-radius: 10rem;    
+}
+.card{
+   display: flex;flex-direction: column;
+   padding: 2rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.date{
+    display: flex;
+    gap: 2rem;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+}
+.box label{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--Off-black);
+}
+input{
+   width: 6vw; 
+   padding: 0.5rem;
+   border: 1px solid var(--Smokey-grey);
+   border-radius: .5rem;
+   display: flex;    
+   align-items: center;
+   font-size: 1.5rem;
+}
+input::placeholder{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.submit{
+    display: flex;
+    align-items: center;
+}
+.submit hr{
+    width: 100%;
+}
+.submit-btn{
+    border-radius: 50%;
+    padding: 1rem;
+    background-color: var(--Purple);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.results h1{
+    font-size: 5rem;
+    font-weight: 800;
+    height: fit-content;
+}
+.results span{
+    color: var(--Purple);
+}
+small{
+    color: red;
+    font-size: 1rem;
+}
+@media screen and (max-width:768px){
+    .container{
+        width: 90vw;
+    }
+    .card{
+        padding: 1rem;
+    }
+    .date{
+        margin-bottom: 5rem;
+        gap: 0;
+        justify-content: space-between;
+    }
+    input{
+      width:85%;
+    }
+    input::placeholder{
+        font-size: 1.2rem;
+    }
+    .submit{
+        position: relative;
+    }
+    .submit-btn{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .results{
+        margin-top: 5rem;
+    }
+    .results h1{
+        font-size: 3.5rem;
+    }
+    small{
+        font-size: 0.8rem;
+    }
+}
